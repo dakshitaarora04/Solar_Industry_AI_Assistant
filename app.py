@@ -17,8 +17,9 @@ if uploaded_file:
     output_kw = estimate_solar_output(area) / 1000
     roi = estimate_roi(output_kw)
 
-    st.image(image, caption="Original Image", use_column_width=True)
-    st.image(mask, caption="Detected Rooftop Area (Grayscale)", use_column_width=True, clamp=True)
+    st.image(image, caption="Original Image", use_container_width=True)
+    st.image(mask, caption="Detected Rooftop Area (Grayscale)", use_container_width=True, clamp=True)
+
 
     st.markdown("### 📊 Solar Analysis")
     st.success(f"**Rooftop Area:** {area:.2f} m²")
